@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 from pyngrok import ngrok
 import requests
+import os
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 @app.route("/")
 def home():
