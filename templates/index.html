@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talktive.ai</title>
+
+    <!-- CSS CONNECTION -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dark">
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+        <h1>Talktive.ai</h1>
+
+        <button id="modelBtn">Model</button>
+        <button id="themeToggle">Dark / Light</button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="chat-area">
+        <div id="chatMessages"></div>
+
+        <div class="chat-input">
+            <input id="userInput" type="text" placeholder="Type your message..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- MODEL MODAL -->
+<div id="modelModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal">×</span>
+        <h2>Models</h2>
+        <div class="model-list">
+    <button class="model-item active">llama-3.1-8b-instant🏅</button>
+    <button class="model-item">llama-3.3-70b-versatile🥈</button>
+    <button class="model-item">openai/gpt-oss-120b 🥇</button>
+    <button class="model-item">openai/gpt-oss-20b🥉</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS CONNECTION -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
